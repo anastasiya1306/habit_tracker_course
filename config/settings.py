@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'users',
     'habit_tracker',
     'rest_framework_simplejwt',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
