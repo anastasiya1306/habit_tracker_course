@@ -1,0 +1,65 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$d9iYdIv2TXhev7JfqOlEEp$+XRCLloXVp6DJtYj0rw6VD3NI3le8rVeazaZD3x2Sy4=",
+      "last_login": null,
+      "is_superuser": true,
+      "first_name": "admin",
+      "last_name": "skypro",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-08-23T17:55:20.145Z",
+      "email": "burykh_2000@mail.ru",
+      "phone": null,
+      "city": null,
+      "avatar": "",
+      "chat_id": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$uTwKEteN5gG3MCmwjXQeE9$98GvR2DWsh4ModIkcltEDSGNeX5UGBKlWb8jm7u3esw=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "test",
+      "last_name": "test",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-08-23T18:34:05.548Z",
+      "email": "skypro@test.com",
+      "phone": null,
+      "city": null,
+      "avatar": "",
+      "chat_id": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$H9ZkcSNj8Mg0WZtrYVyLoD$RACSx7kkQ3T1gG6Qzps5CZ1G2RqzXvHyQvhegOMW+BM=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "test",
+      "last_name": "skypro",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-08-23T18:51:12.869Z",
+      "email": "test@sky.com",
+      "phone": null,
+      "city": null,
+      "avatar": "",
+      "chat_id": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
