@@ -1,17 +1,18 @@
 from celery import shared_task
-import telebot
+from telebot import TeleBot
 from datetime import datetime, timedelta
 from config import settings
+from config.celery import app
 from habit_tracker.models import Habit
 
 
 @shared_task
-def habit_task(habit):
-    bot = telebot.TeleBot(settings.TELEGRAM_BOT_API)
+def send_message_habit():
+    bot = TeleBot(settings.TG_BOT_API)
     time_now = datetime.now()
-    time_start_task = time_now - timedelta(minutes=1)
-    habit_data = Habit.objects.filter(time__gte=time_start_task)
+    start_time = time_now - timedelta(minutes=1)
+    habit = Habit.objects.filter(time__gte=start_time)
 
-    for item in habit_data.filter(time__lte=time_now):
-        message = f"В {item.place} не забудьте {item.action} в {item.time}"
-        bot.send_message(message, 'item.user.chat_id')
+    for habit in habit.filter(time__lte=time_now):
+        message = f"Не забудьте в {habit.place} {habit.action} в {habit.time}"
+        bot.send_message(message, 'habit.user.chat_id')
